@@ -724,7 +724,7 @@ def state_changed(state, duration):
         for l in hue.ambilight_dim_light:
           l.brighter_light()
     else:
-      hue.partial_lights()
+      hue.brighter_lights()
   elif state == "stopped":
     if hue.settings.mode == 0 and hue.settings.ambilight_dim:
       if hue.settings.ambilight_dim_light == 0:

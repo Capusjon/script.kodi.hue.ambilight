@@ -719,10 +719,10 @@ def state_changed(state, duration):
     #only if its coming from being off
     if hue.settings.mode == 0 and hue.settings.ambilight_dim:
       if hue.settings.ambilight_dim_light == 0:
-        hue.ambilight_dim_light.partial_light()
+        hue.ambilight_dim_light.brighter_light()
       elif hue.settings.ambilight_dim_light > 0:
         for l in hue.ambilight_dim_light:
-          l.partial_light()
+          l.brighter_light()
     else:
       hue.partial_lights()
   elif state == "stopped":
